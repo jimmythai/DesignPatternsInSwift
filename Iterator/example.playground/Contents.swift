@@ -43,3 +43,9 @@ let backpacks = Backpacks(backpacks: [Backpack(name: "QUANTUM 70 + 10", brandNam
 for backpack in backpacks {
     print("Name: \(backpack.name), Brand name: \(backpack.brandName), Price: \(backpack.price)\(backpack.currency)")
 }
+
+// Inside of for loop
+// var iterator = someSequence.makeItrator()
+// while let element = iterator.next() {
+//     doSomething(with: element)
+// }
