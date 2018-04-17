@@ -1,6 +1,7 @@
-/////////////////////
+// Category: Structural
+// When to use: In case you need a different interface without changing an existent class/struct
+
 // Object adapter
-/////////////////////
 // Define
 protocol Thunderbold3 {
     func display()
@@ -29,9 +30,7 @@ let thunderbolt2 = Thunderbolt2()
 let thunderbolt3 = Thunderbolt3ToThunderbold2Adapter(thunderbolt2: thunderbolt2)
 thunderbolt3.display()
 
-/////////////////////
 // Class adapter
-/////////////////////
 // Define
 protocol Thunderbolt3c {
     func display()
