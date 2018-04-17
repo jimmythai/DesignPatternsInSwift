@@ -1,3 +1,7 @@
+// Category: Structural
+// When to use: In case you want to add new behaviors to objects by regarding them as wrapper objects.
+
+// Define
 // Core Component
 protocol iPhone {
     var cost: Double { get }
@@ -62,6 +66,7 @@ struct GoldColor: iPhoneDecorator {
     }
 }
 
+// Use
 let iphone6 = iPhone6()
 let biggeriPhone = UpgradeStorage(base: iphone6)
 let goldColoriPhone = GoldColor(base: biggeriPhone)
