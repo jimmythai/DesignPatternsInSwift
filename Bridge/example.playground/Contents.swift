@@ -1,3 +1,8 @@
+// Category: Structural
+// When to use: In case that you want to dynamically change functions and interfaces
+// Similar pattern: Strategy pattern
+
+// Define
 protocol Engine {
     func move()
 }
@@ -44,6 +49,7 @@ class Bike: Vehicle {
     }
 }
 
+// Use
 let powerfulEngine = PowerfulEngine()
 let fastEngine = FastEngine()
 
