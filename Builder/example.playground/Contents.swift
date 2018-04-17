@@ -1,3 +1,6 @@
+// Category: Creational
+// When to use: In case you want to separate the complicate creation from a core business logic.
+
 import Foundation
 
 //Pattern 1
@@ -36,7 +39,6 @@ class PersonBuilder: Buildable {
     }
 }
 
-//Pattern 2
 struct Person {
     let firstName: String?
     let middleName: String?
@@ -63,6 +65,8 @@ let person = PersonBuilder()
     .build()
 print(person.wholeName ?? "")
 
+
+// Pattern 2
 class PersonBuilder2 {
     var firstName: String?
     var middleName: String?
