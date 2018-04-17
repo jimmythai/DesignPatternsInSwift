@@ -1,6 +1,6 @@
-// There are two ways to make adapter pattern.
-
+/////////////////////
 // Object adapter
+/////////////////////
 // Define
 protocol Thunderbold3 {
     func display()
@@ -29,8 +29,9 @@ let thunderbolt2 = Thunderbolt2()
 let thunderbolt3 = Thunderbolt3ToThunderbold2Adapter(thunderbolt2: thunderbolt2)
 thunderbolt3.display()
 
-
+/////////////////////
 // Class adapter
+/////////////////////
 // Define
 protocol Thunderbolt3c {
     func display()
