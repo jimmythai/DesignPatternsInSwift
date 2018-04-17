@@ -1,7 +1,11 @@
+// Category: Structural
+// When to use: In case you want to simplify client code by compose objects into tree structures.
+
 import Foundation
 import UIKit
 
 // Example 1
+// Define
 protocol Box {
     var price: Int { get set }
     
@@ -38,6 +42,7 @@ struct Present: Box {
     }
 }
 
+// Use
 let cylinderBox1 = CylinderBox()
 let cylinderBox2 = CylinderBox()
 let squareBox1 = SquareBox()
@@ -50,7 +55,9 @@ let christmasPresent = Present(boxes: [bigPresent, cylinderBox2, squareBox1])
 
 print(christmasPresent.price)
 
+
 // Example 2
+// Define
 protocol Team {
     var children: [Team] { get set }
     var people: [String] { get set }
@@ -68,6 +75,7 @@ struct Department: Team {
     }
 }
 
+// Use
 let department1 = Department(children: [], people: ["Claptone", "Adam"])
 let department2 = Department(children: [department1], people: ["Michael"])
 let department3 = Department(children: [], people: ["Jason"])
