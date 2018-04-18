@@ -1,3 +1,6 @@
+// Category: Behavioral
+// When to use: In case you need more than one handler for the request.
+
 struct Person {
     let name: String
     let waist: Int
