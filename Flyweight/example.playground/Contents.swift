@@ -1,3 +1,6 @@
+// Category: Structural
+// When to use: In case you want to reduce the number of object instancies.
+
 struct Car {
     let name: String
 }
