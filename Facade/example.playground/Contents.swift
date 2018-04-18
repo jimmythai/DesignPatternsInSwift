@@ -1,3 +1,6 @@
+// Category: Structural
+// When to use: In case you want to have a simple API, which ask subsystems to work, but doesn't have a complex implementation.
+
 import Foundation
 
 struct SampleAppDateFormatter {
