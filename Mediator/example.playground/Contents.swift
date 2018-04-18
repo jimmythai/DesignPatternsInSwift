@@ -1,3 +1,7 @@
+// Category: Behavioral
+// When to use: In case you have multiple objects which have to communicate each other.
+
+// Define
 protocol Mediator {
     func notify(number: Int, sender: Balancer)
 }
@@ -99,7 +103,7 @@ class BalancerForX3: Balancer {
     }
 }
 
-
+// Use
 var balancerMediator = BalancerMediator()
 
 let balancerForX1 = BalancerForX1(mediator: balancerMediator)
