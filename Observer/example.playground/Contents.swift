@@ -1,3 +1,7 @@
+// Category: Behavioral
+// When to use: In case you have more than one object where you have to notify the changes of an object.
+
+// Define
 protocol Observer {
     var id: Int { get }
     func update<T>(with newValue: T)
@@ -65,12 +69,12 @@ class SomeObserver: Observer {
         self._id = id
     }
     
-    
     func update<T>(with newValue: T) {
         print("\(id) is updated with \(newValue)")
     }
 }
 
+// Use
 let observer1 = SomeObserver(id: 1)
 let observer2 = SomeObserver(id: 2)
 let name1 = Variable("Michael")
@@ -79,7 +83,3 @@ name1.addObserver(observer: observer1)
 name1.addObserver(observer: observer2)
 
 name1.value = "Jason"
-
-
-
-
