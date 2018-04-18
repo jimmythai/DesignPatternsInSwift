@@ -1,5 +1,9 @@
+// Category: Behavioral
+// When to use: In case you want to have behaviors which change depending on their states.
+
 import UIKit
 
+// Define
 protocol HealthState {
     var color: UIColor { get }
     var face: String { get }
@@ -36,6 +40,7 @@ class Student {
     }
 }
 
+// Use
 let someStudent = Student()
 print("Face: \(someStudent.face)")
 
