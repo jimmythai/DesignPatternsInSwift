@@ -1,3 +1,6 @@
+// Category: Behavioral
+// When to use: In case you want to access objects sequentially.
+
 // Define
 struct Backpack {
     let name: String
@@ -7,7 +10,11 @@ struct Backpack {
 }
 
 struct Backpacks {
-    let backpacks: [Backpack]
+    private let backpacks: [Backpack]
+    
+    init(_ backpacks: [Backpack]) {
+        self.backpacks = backpacks
+    }
 }
 
 struct BackpacksIterator: IteratorProtocol {
@@ -37,14 +44,13 @@ extension Backpacks: Sequence {
     }
 }
 
-
 // Use
-let backpacks = Backpacks(backpacks: [Backpack(name: "QUANTUM 70 + 10", brandName: "Deuter", price: 255, currency: "€")])
+let backpacks = Backpacks([Backpack(name: "QUANTUM 70 + 10", brandName: "Deuter", price: 255, currency: "€")])
 for backpack in backpacks {
     print("Name: \(backpack.name), Brand name: \(backpack.brandName), Price: \(backpack.price)\(backpack.currency)")
 }
 
-// Inside of for loop
+// Inside of for-loop
 // var iterator = someSequence.makeItrator()
 // while let element = iterator.next() {
 //     doSomething(with: element)
