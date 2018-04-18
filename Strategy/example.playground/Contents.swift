@@ -1,3 +1,7 @@
+// Category: Behavioral
+// When to use: In case you want to decide algorithm at run-time.
+
+// Define
 protocol VehicleStrategy {
     func run()
 }
@@ -5,7 +9,7 @@ protocol VehicleStrategy {
 class Vehicle {
     private let vehicle: VehicleStrategy
     
-    init(vehicle: VehicleStrategy) {
+    init(_ vehicle: VehicleStrategy) {
         self.vehicle = vehicle
     }
     
@@ -26,8 +30,9 @@ class Bike: VehicleStrategy {
     }
 }
 
+// Use
 let car = Car()
 let bike = Bike()
 
-let vehicle = Vehicle(vehicle: car)
+let vehicle = Vehicle(car)
 vehicle.run()
