@@ -1,3 +1,6 @@
+// Cateogry: Creational
+// When to use: In case you want to decouple an object creation from its implementations and increase the flexibility of a
+
 // Product
 protocol Phone {
     func call()
