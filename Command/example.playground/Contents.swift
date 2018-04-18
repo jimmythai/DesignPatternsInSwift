@@ -1,3 +1,7 @@
+// Category: Behavioral
+// When to use: In case you want to make a request a object.
+
+// Define
 protocol Command {
     func execute()
 }
@@ -6,7 +10,7 @@ struct PotatoChips {
     let name: String
     
     func open() {
-        print("opened")
+        print("\(name) opened")
     }
 }
 
@@ -14,11 +18,11 @@ struct OrangeJuice {
     let name: String
     
     func shake() {
-        print("shaked")
+        print("\(name) shaked")
     }
     
     func open() {
-        print("opened")
+        print("\(name) opened")
     }
 }
 
@@ -48,10 +52,12 @@ struct PartyOwner {
     
     func prepareForParty() {
         commands.forEach { $0.execute() }
+        
+        print("Well, it's ready:)")
     }
 }
 
-
+// Use
 let potatoChips = PotatoChips(name: "Tasty potato chips")
 let orangeJuice = OrangeJuice(name: "Valencia orange juice")
 
