@@ -1,3 +1,6 @@
+// Category: Behavioral
+// When to use: In case you want to capture an object, restore it and reuse it.
+
 import Foundation
 import PlaygroundSupport
 
