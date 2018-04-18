@@ -1,3 +1,6 @@
+// Category: Creational
+// When to use: In case you want to separate objects' creation from their locic.
+
 // Product
 protocol Phone {
     func call()
