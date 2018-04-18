@@ -1,4 +1,7 @@
-// Example 1
+// Category: Structural
+// When to use: In case you want to control the access to an object and handle things that it can't deal with.
+
+// Example 1 (Protection proxy)
 protocol Network {
     func fetch() -> String
 }
@@ -34,17 +37,3 @@ struct UserNetworkProxy: Network {
 var userNetworkProxy = UserNetworkProxy()
 userNetworkProxy.authenticate(password: "password")
 userNetworkProxy.fetch()
-
-// Example 2
-struct UserNetworkProxy2: Network {
-    let userNetwork = UserNetwork()
-    
-    func fetch() -> String {
-        print("Logged network request!")
-        
-        return userNetwork.fetch()
-    }
-}
-
-let userNetworkProxy2 = UserNetworkProxy2()
-userNetworkProxy2.fetch()
