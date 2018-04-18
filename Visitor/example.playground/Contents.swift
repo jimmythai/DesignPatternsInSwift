@@ -1,3 +1,7 @@
+// Category: Behavioral
+// When to use: In case that the number of data class doesn't change and the behavior can increase, the Visitor pattern is really usefull.
+
+// Define
 protocol Animal {
     var name: String { get }
     
@@ -45,6 +49,7 @@ class BarkBehavior: Behavior {
     }
 }
 
+// Use
 let move = MoveBehavior()
 let bark = BarkBehavior()
 let animals: [Animal] = [Cat(), Dog()]
@@ -53,5 +58,3 @@ animals.forEach {
     $0.behave(move)
     $0.behave(bark)
 }
-
-// In case that the number of data class doesn't change and the behavior can increase, the Visitor pattern is really usefull.
