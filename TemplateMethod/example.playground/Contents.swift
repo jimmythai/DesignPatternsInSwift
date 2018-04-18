@@ -1,3 +1,7 @@
+// Category: Behavioral
+// When to use: In case you want to make the skelton of an algorithm and decide it at run-time.
+
+// Pattern 1
 // - You need to write empty functions.
 // - But, you don't know that you override the methods which you have to or not until you run the application.
 class AbstractClass {
@@ -27,6 +31,7 @@ let concreteClass = ConcreteClass()
 concreteClass.operation()
 
 
+// Pattern 2
 // - Since Swift doesn't have abstract class, this will better.
 // - However, it is possible for you to override the `operation()` method.
 protocol OperationProtocol {
@@ -53,7 +58,9 @@ struct ConcreteStruct: OperationProtocol {
 let concreteStruct = ConcreteStruct()
 concreteStruct.operation()
 
-// Not to override `operation()` method, use delegation pattern. (Strategy pattern?)
+
+// Pattern 3
+// Not to override `operation()` method, use delegation pattern.
 protocol FinalOperationProtocol {
     func operation()
 }
@@ -89,10 +96,4 @@ class SomeOperations1: OperationsProtocol {
 let finalOperation = FinalOperation(delegate: SomeOperations1())
 finalOperation.operation()
 
-
 // The purpose of Strategy pattern and Template Method pattern are to make the detail of alogrithms changeable.
-
-// Behavioral design pattern
-
-// Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an alogrithm without changing the algorithm's structure.
-
